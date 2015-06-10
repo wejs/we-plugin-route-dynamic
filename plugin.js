@@ -60,5 +60,20 @@ module.exports = function loadPlugin(projectPath, Plugin) {
     }
   });
 
+  // bind dynamic routes after static routes
+  plugin.hooks.on('we:after:routes:bind', function(we, done) {
+    we.db.models.route.findAll().then(function (droutes) {
+      if (!droutes) return done();
+
+      we.dynamicRoutes = droutes;
+
+      for (var route in we.dynamicRoutes) {
+        we.router.bindRoute(we, route, we.dynamicRoutes[route] );
+      }
+
+      done();
+    }).catch(done);
+  });
+
   return plugin;
 };
