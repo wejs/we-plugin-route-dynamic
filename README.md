@@ -1,8 +1,10 @@
 # we-plugin-route-dynamic
 
-> [write something about your plugin here]
+> API for set routes on the fly and store custom routes in database
 
 # API
+
+> see plugin.js file
 
 
 ## Links
