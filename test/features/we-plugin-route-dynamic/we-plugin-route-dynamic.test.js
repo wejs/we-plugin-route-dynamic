@@ -72,7 +72,7 @@ describe('we-plugin-route-dynamicFeature', function() {
         model: 'user',
         responseType: 'json',
         permission: null
-     };
+      };
 
       authenticatedRequest.post('/api/v1/route')
       .send(r)

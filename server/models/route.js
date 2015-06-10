@@ -39,6 +39,15 @@ module.exports = function Model(we) {
         defaultValue: 'public'
       },
 
+      // express template and layout
+      template: {
+        type: we.db.Sequelize.STRING(1500)
+      },
+      layout: {
+        type: we.db.Sequelize.STRING(1500)
+      }
+
+      // - upload routes
       // dest
       // upload: {
       //   type: we.db.Sequelize.STRING,
@@ -49,8 +58,6 @@ module.exports = function Model(we) {
     associations: {},
 
     options: {
-      paranoid: false,
-
       classMethods: {},
       instanceMethods: {},
       hooks: {}
