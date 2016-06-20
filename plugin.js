@@ -1,3 +1,5 @@
+console.log('we-plugin-route-dynamic is DEPRECATED! - See the https://github.com/wejs/we-plugin-url-alias');
+
 /**
  * Plugin.js file, set configs, routes, hooks and events here
  *
